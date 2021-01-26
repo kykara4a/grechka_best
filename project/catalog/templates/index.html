@@ -1,0 +1,49 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<<<<<<< Updated upstream
+  <table class="table" cellspacing="0">
+    <thead>
+      <tr>
+          {% for i in headers %}
+          <th>{{i}}</th>
+          {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in data %}
+      <tr onclick="window.open('{{i.links}}'); return false"  class="tb_how">
+          <th>{{i.index}}</th>
+          <td>{{i.name}}</td>
+          <td>{{i.price}}</td>
+          <th>{{i.store}}</h>
+      </tr>
+     {% endfor %}
+    </tbody>
+    <thead>
+      <tr>
+          {% for i in headers %}
+          <th>{{i}}</th>
+          {% endfor %}
+      </tr>
+    </thead>
+</table>
+  </table>
+=======
+<h1>My project</h1>
+
+<h2>Dynamic content</h2>
+
+  <p>Text BLA-BLA-BLA</p>
+  <ul>
+    {% for i in num_Products %}
+      <li>{{ i }}</li>
+    {% endfor %}
+  </ul>
+  <ul>
+    <li><strong>Products:</strong> {{ num_Products }}</li>
+
+  </ul>
+>>>>>>> Stashed changes
+
+{% endblock %}

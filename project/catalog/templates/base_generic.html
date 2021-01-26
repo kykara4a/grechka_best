@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  {% block title %}<title>Grechka best</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Добавление дополнительного статического CSS файла -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  {% load static %}
+  <link rel="shortcut icon" type="image/png" href="{% static "img/logo.png" %}" />
+</head>
+
+<body>
+<header class="pageHeader">
+  <h1 class="text_h1">
+    GRECHKA BEST
+  </h1>
+  <h1 class="text_title">
+    Обирай гречку разом з BEST
+  </h1>
+  {% load static %}
+  <img src="{% static "img/logo.png" %}" alt="My image"/>
+</header>
+<nav class="mainNav">
+  {% load static %}
+  <a href="{% url 'index' %}"><img src="{% static "img/reload.png" %}" alt="My image"/></a>
+  <h1 class="t_update text_style">Оновити дані</h1>
+</nav>
+<article class="mainArticle  text_style">
+    <div class="table">
+      {% block content %}{% endblock %}
+    </div>
+    <span>
+      * - ціна зі знижкою 
+    </span>
+</article>
+<nav class="mainVoid"></nav>
+<footer class="pageFooter text_style">2021 &copy; Всі права захищені </footer>
+</body>
+
+</html>
